@@ -1,14 +1,12 @@
 # Follow Instagram : hxrun.777
 # Subscribe YouTube : Haroen Legend
 
-import androidhelper
 from random import choice
 import time
 
 print('--- Selamat datang ke Cek Khodam ---')
 answer = 'y'
 while answer == 'y':
-    droid = androidhelper.Android()
     khodam = choice(["Martabak Cokelat",
         "Naga Sakti",
         "Ratu Pantai Selatan",
