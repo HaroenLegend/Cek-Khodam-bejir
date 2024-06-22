@@ -1,2 +1,2 @@
 # Cek-Khodam-bejir
-Contoh script sederhana pengecekan khodam
+Contoh script sederhana dari cek khodam.
